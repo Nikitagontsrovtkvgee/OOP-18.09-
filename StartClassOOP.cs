@@ -1,28 +1,38 @@
-﻿using System;
+using System;
 
-public abstract class Inimene
+namespace TARpv24_Ckeel
 {
-    public string Nimi;
-    public int vanus;
-
-    public Inimene(string nimi, int vanus)
+    public abstract class Inimene
     {
-        Nimi = nimi;
-        Vanus = vanus;
+        public string Nimi;
+        public int Vanus;
+        public Pank Konto { get; set; }
+
+        public Inimene(string nimi, int vanus)
+        {
+            Nimi = nimi;
+            Vanus = vanus;
+            Konto = new Pank();
+        }
 
         public Inimene()
         {
-        Nimi = "Mati"
-
-            Vanus = 20
-
+            Nimi = "Mati";
+            Vanus = 20;
+            Konto = new Pank();
         }
 
         public void Tervita()
         {
             Console.WriteLine("Tere! Mina olen " + Nimi);
         }
+
         public abstract void Mida_teeb();
-        
+    }
+
+    public interface IKujund
+    {
+        double ArvutaPindala();
+        double ArvutaÜmbermõõt();
     }
 }
