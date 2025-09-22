@@ -1,0 +1,4 @@
+Auto;6.5;120;1.8
+Jalgratas;15
+Buss;20;300;1.7;40
+Elektritõukeratas;2;50;0.25
